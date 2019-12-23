@@ -30,6 +30,7 @@ class UserItem(scrapy.Item):
     Uid = scrapy.Field()
     UserUrl = scrapy.Field()
     UserName = scrapy.Field()
+    ContainerId = scrapy.Field()
 
     # 需要人来确定
     ProfileImg = scrapy.Field()

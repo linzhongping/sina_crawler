@@ -27,7 +27,7 @@ CONCURRENT_REQUESTS = 1
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 8
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -55,7 +55,8 @@ COOKIES_URL = 'http://localhost:5000/weibo/random'
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     'sina_crawler.middlewares.SinaCrawlerDownloaderMiddleware': 543,
-    'sina_crawler.middlewares.CookiesMiddleware':126
+    'sina_crawler.middlewares.CookiesMiddleware':126,
+
 }
 
 # Enable or disable extensions
@@ -66,9 +67,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'sina_crawler.pipelines.SinaCrawlerPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'sina_crawler.pipelines.SinaCrawlerPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
